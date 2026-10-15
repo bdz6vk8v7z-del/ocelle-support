@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ocelle — pièges mentaux et tests psychotechniques</title>
+<meta name="description" content="Ocelle : chaque jour, un biais cognitif expliqué en 3 minutes, un défi de 5 scènes et un test psychotechnique pour t’entraîner. Sans compte, sans publicité, sans pistage.">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<style>
+:root{--bg:#F6F1E7;--surface:#FFFCF6;--ink:#15182D;--soft:#4D5068;--line:#E4DCCB;--amber:#D98A0B;--fill:#F4A62A;--night:#0D1023;--cream:#F6F1E7}
+@media (prefers-color-scheme:dark){:root{--bg:#0D1023;--surface:#171B35;--ink:#F3EDE1;--soft:#B9B4C9;--line:#2A2F55;--amber:#FFB43C}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif}
+h1,h2,h3{font-family:ui-serif,"New York",Georgia,serif;line-height:1.2;margin:0 0 .4em}
+a{color:var(--amber)}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px}
+header.hero{background:var(--night);color:var(--cream);padding:56px 0 64px;text-align:center}
+.hero svg{width:132px;height:132px}
+.hero h1{font-size:clamp(40px,8vw,64px);margin-top:12px}
+.hero p{font-size:20px;opacity:.85;margin:0 auto;max-width:560px}
+.hero p.more{font-size:18px;margin-top:10px}
+.badge{display:inline-block;margin-top:24px;padding:12px 22px;border-radius:999px;background:var(--fill);color:var(--night);font-weight:700;text-decoration:none}
+.lang{position:absolute;top:16px;right:16px;display:flex;gap:6px}
+.lang button{border:1px solid rgba(246,241,231,.35);background:transparent;color:var(--cream);border-radius:999px;padding:6px 12px;font:inherit;font-size:14px;cursor:pointer}
+.lang button[aria-pressed=true]{background:var(--cream);color:var(--night)}
+section{padding:44px 0 8px}
+.grid{display:grid;gap:14px;grid-template-columns:1fr}
+@media (min-width:640px){.grid{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:20px}
+.card h3{font-size:20px}
+.card p{margin:0;color:var(--soft)}
+details{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:14px 18px;margin:10px 0}
+summary{font-weight:600;cursor:pointer}
+details p{color:var(--soft);margin:.6em 0 0}
+.contact{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+code{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:6px 10px;font-size:15px}
+footer{padding:40px 0 56px;color:var(--soft);font-size:15px}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="lang" role="group" aria-label="Langue / Language">
+    <button type="button" data-set="fr" aria-pressed="true">FR</button>
+    <button type="button" data-set="en" aria-pressed="false">EN</button>
+  </div>
+  <div class="wrap">
+    <svg viewBox="0 0 100 100" role="img" aria-label="Ocelle">
+      <defs>
+        <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFD27A"/><stop offset=".55" stop-color="#F4A62A"/><stop offset="1" stop-color="#DD7F0C"/></linearGradient>
+        <clipPath id="c1"><path d="M50,28.9 L44.05,39.21 A11.9,11.9 0 1 1 55.95,39.21 Z"/></clipPath>
+        <clipPath id="c2"><path d="M71.3,65.8 L65.35,55.49 A11.9,11.9 0 1 1 59.4,65.8 Z"/></clipPath>
+        <clipPath id="c3"><path d="M28.7,65.8 L40.6,65.8 A11.9,11.9 0 1 1 34.65,55.49 Z"/></clipPath>
+      </defs>
+      <g fill="url(#g)">
+        <path d="M50,28.9 L44.05,39.21 A11.9,11.9 0 1 1 55.95,39.21 Z"/>
+        <path d="M71.3,65.8 L65.35,55.49 A11.9,11.9 0 1 1 59.4,65.8 Z"/>
+        <path d="M28.7,65.8 L40.6,65.8 A11.9,11.9 0 1 1 34.65,55.49 Z"/>
+      </g>
+      <g fill="none" stroke="#0D1023" stroke-width="1.46">
+        <g clip-path="url(#c1)"><circle cx="50" cy="28.9" r="2.93"/><circle cx="50" cy="28.9" r="5.86"/><circle cx="50" cy="28.9" r="8.79"/></g>
+        <g clip-path="url(#c2)"><circle cx="71.3" cy="65.8" r="2.93"/><circle cx="71.3" cy="65.8" r="5.86"/><circle cx="71.3" cy="65.8" r="8.79"/></g>
+        <g clip-path="url(#c3)"><circle cx="28.7" cy="65.8" r="2.93"/><circle cx="28.7" cy="65.8" r="5.86"/><circle cx="28.7" cy="65.8" r="8.79"/></g>
+      </g>
+    </svg>
+    <h1>Ocelle</h1>
+    <p lang="fr">Un piège mental par jour. Trois minutes pour le comprendre, deux pour le repérer.</p>
+    <p lang="en" hidden>One mental trap a day. Three minutes to understand it, two to spot it.</p>
+    <p class="more" lang="fr">Et des tests psychotechniques pour t’entraîner : suites, dominos, mémoire, logique.</p>
+    <p class="more" lang="en" hidden>Plus psychotechnical tests to train with: sequences, dominoes, memory, logic.</p>
+    <span class="badge" lang="fr">Bientôt sur l’App Store</span>
+    <span class="badge" lang="en" hidden>Coming soon to the App Store</span>
+  </div>
+</header>
+
+<main class="wrap">
+  <section>
+    <div class="grid">
+      <div class="card"><h3 lang="fr">Le piège du jour</h3><h3 lang="en" hidden>Today’s trap</h3>
+        <p lang="fr">Un biais, un sophisme ou un piège des chiffres, avec une scène de la vraie vie et un antidote concret.</p>
+        <p lang="en" hidden>A bias, a fallacy or a number trap, with a real-life scene and a practical antidote.</p></div>
+      <div class="card"><h3 lang="fr">Le défi du jour</h3><h3 lang="en" hidden>The daily challenge</h3>
+        <p lang="fr">Cinq scènes du quotidien, le même défi pour tout le monde. Garde ta série, partage ton score.</p>
+        <p lang="en" hidden>Five everyday scenes, the same challenge for everyone. Keep your streak, share your score.</p></div>
+      <div class="card"><h3 lang="fr">Le test psychotechnique du jour</h3><h3 lang="en" hidden>Today’s psychotechnical test</h3>
+        <p lang="fr">Dix questions variées, des suites au calcul mental, le même test pour tout le monde. Chaque réponse est corrigée et expliquée.</p>
+        <p lang="en" hidden>Ten varied questions, from sequences to mental math, the same test for everyone. Every answer is corrected and explained.</p></div>
+      <div class="card"><h3 lang="fr">L’entraînement</h3><h3 lang="en" hidden>Training</h3>
+        <p lang="fr">Neuf familles d’exercices, des suites de nombres aux rotations. Une séance gratuite par jour, sans limite avec Ocelle+.</p>
+        <p lang="en" hidden>Nine kinds of exercises, from number series to rotations. One free session a day, unlimited with Ocelle+.</p></div>
+      <div class="card"><h3 lang="fr">L’examen blanc</h3><h3 lang="en" hidden>The mock exam</h3>
+        <p lang="fr">Trente questions en vingt minutes, corrigées à la fin, pour t’habituer au format et au chronomètre. Inclus dans Ocelle+.</p>
+        <p lang="en" hidden>Thirty questions in twenty minutes, corrected at the end, to get used to the format and the clock. Included in Ocelle+.</p></div>
+      <div class="card"><h3 lang="fr">Honnête et privée</h3><h3 lang="en" hidden>Honest and private</h3>
+        <p lang="fr">Chaque piège affiche son niveau de preuve. Pas de compte, pas de publicité, aucun pistage.</p>
+        <p lang="en" hidden>Every trap shows how solid it is. No account, no ads, no tracking.</p></div>
+    </div>
+  </section>
+
+  <section id="aide">
+    <h2 lang="fr">Aide</h2><h2 lang="en" hidden>Help</h2>
+    <div lang="fr">
+      <details><summary>Est-ce un vrai test officiel ?</summary><p>Non. Les tests psychotechniques d’Ocelle sont un entraînement : les questions sont créées par l’app, dans l’esprit des tests classiques, sans lien avec un organisme, un concours ou un recruteur. Les résultats n’ont aucune valeur officielle, ne mesurent pas ton QI et ne remplacent pas une évaluation faite par un professionnel. L’examen blanc t’habitue au format et au chronomètre, rien de plus.</p></details>
+      <details><summary>Comment gérer ou résilier mon abonnement ?</summary><p>Dans l’app Réglages de ton iPhone : touche ton nom, puis Abonnements, puis Ocelle+. La résiliation prend effet à la fin de la période en cours. Elle doit être faite au moins 24 heures avant la fin de l’essai gratuit pour ne pas être facturé.</p></details>
+      <details><summary>J’ai changé d’iPhone : comment retrouver Ocelle+ ?</summary><p>Dans Ocelle, onglet Progrès, carte Réglages : « Restaurer les achats ». Utilise le même compte Apple que lors de l’achat.</p></details>
+      <details><summary>Ma progression est-elle sauvegardée ?</summary><p>Elle est enregistrée uniquement sur ton iPhone, y compris tes résultats aux tests psychotechniques, et incluse dans les sauvegardes de l’appareil. Ocelle n’a pas de compte ni de serveur : rien n’est envoyé.</p></details>
+      <details><summary>Comment demander un remboursement ?</summary><p>Les paiements sont gérés par Apple : fais ta demande sur reportaproblem.apple.com.</p></details>
+    </div>
+    <div lang="en" hidden>
+      <details><summary>Is it a real, official test?</summary><p>No. Ocelle’s psychotechnical tests are training: the questions are created by the app, in the spirit of classic aptitude tests, with no link to any organization, exam or employer. Results have no official value, do not measure your IQ and do not replace an assessment by a professional. The mock exam gets you used to the format and the clock, nothing more.</p></details>
+      <details><summary>How do I manage or cancel my subscription?</summary><p>In your iPhone’s Settings app: tap your name, then Subscriptions, then Ocelle+. Cancellation takes effect at the end of the current period. Cancel at least 24 hours before the free trial ends to avoid being charged.</p></details>
+      <details><summary>I changed iPhones: how do I get Ocelle+ back?</summary><p>In Ocelle, Progress tab, Settings card: “Restore purchases”. Use the same Apple Account you bought it with.</p></details>
+      <details><summary>Is my progress saved?</summary><p>It is stored only on your iPhone, including your psychotechnical test results, and included in your device backups. Ocelle has no account and no server: nothing is sent.</p></details>
+      <details><summary>How do I ask for a refund?</summary><p>Payments are handled by Apple: request it at reportaproblem.apple.com.</p></details>
+    </div>
+  </section>
+
+  <section>
+    <h2 lang="fr">Contact</h2><h2 lang="en" hidden>Contact</h2>
+    <div class="contact"><code>balustreyonni@gmail.com</code></div>
+    <p><a href="privacy.html" lang="fr">Politique de confidentialité</a><a href="privacy.html" lang="en" hidden>Privacy policy</a></p>
+  </section>
+</main>
+<footer class="wrap">© 2026 Yonni Balustre · Ocelle</footer>
+<script>
+(function(){
+  var buttons=document.querySelectorAll('[data-set]');
+  function apply(lang){
+    document.documentElement.lang=lang;
+    document.querySelectorAll('[lang]').forEach(function(el){ if(el===document.documentElement) return; el.hidden = el.getAttribute('lang')!==lang; });
+    buttons.forEach(function(b){ b.setAttribute('aria-pressed', String(b.dataset.set===lang)); });
+  }
+  var saved=null; try{ saved=localStorage.getItem('ocelle-lang'); }catch(e){}
+  apply(saved || ((navigator.language||'fr').toLowerCase().indexOf('fr')===0 ? 'fr' : 'en'));
+  buttons.forEach(function(b){ b.addEventListener('click', function(){ apply(b.dataset.set); try{ localStorage.setItem('ocelle-lang', b.dataset.set); }catch(e){} }); });
+})();
+</script>
+</body>
+</html>
